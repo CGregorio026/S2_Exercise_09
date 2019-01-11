@@ -20,7 +20,7 @@
     <title>Red Ball Survey</title>
     <link href="rb_reset.css" rel="stylesheet" />
     <link href="rb_styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="rb_forms.css" />
+    <link href="rb_forms.css" rel="stylesheet" />
     <script src="rb_formsubmit.js"></script>
 
 </head>
@@ -56,6 +56,7 @@
         <p>Required values are marked by an asterisk (*)</p>
 
         <form id="survey" action="http://www.example.com/redball/survey" method="POST">
+            <!-- survey 1 -->
             <fieldset id="custInfo">
                 <legend>Customer Information</legend>
 
@@ -80,18 +81,29 @@
                 </div>
 
                 <div class="formRow">
-                    <label for="zip">Postal code</label>
+                    <label for="zip">Postal Code</label>
                     <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
                 </div>
 
                 <div class="formRow">
-                    <label for="phone">Phone number</label>
-                    <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnn" />
+                    <label for="phone">Phone Number</label>
+                    <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
                 </div>
 
                 <div class="formRow">
                     <label for="mail">E-mail*</label>
                     <input name="custEmail" id="mail" type="email" />
+                </div>
+
+                <div class="formRow">
+                    <label for="info">Where did your hear about us? <br> (select all that apply)</label>
+                    <select name="infoSrc" id="info" size="5" multiple>
+                        <option value="internet">Internet</option>
+                        <option value="mag">Magazine</option>
+                        <option value="news">Newspaper</option>
+                        <option value="word">Word of Mouth</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
 
                 <div class="formRow">
@@ -116,50 +128,51 @@
                 <label for="mailCB">Add me to your mailing list for great coupons and specials!</label>
             </fieldset>
 
+            <!-- survey 2 -->
             <fieldset id="expInfo">
                 <legend>Share Your Experience at Red Ball Pizza</legend>
 
                 <div class="formRow">
-                    <label for="visit">Date of visit</label>
+                    <label for="visit">Date of Visit</label>
                     <input name="visitDate" id="visit" type="date" />
                 </div>
 
                 <div class="formRow">
-                    <label for="order">Order type</label>
+                    <label for="order">Order Type</label>
                     <select name="orderType" id="order">
-                        <option value="order1">Carry out</option>
+                        <option value="order1">Carry Out</option>
                         <option value="order2">Delivery</option>
-                        <option value="order3" selected>Dine in</option>
-                        <option value="order4">Take 'n bake</option>
+                        <option value="order3" selected>Dine In</option>
+                        <option value="order4">Take 'n Bake</option>
                     </select>
                 </div>
 
                 <div class="formRow">
-                    <label for="order">Was your service friendly?</label>
+                    <label>Was your service friendly?</label>
                     <fieldset class="optGroup">
-                        <label for="yes">Yes</label>
-                        <input name="sFriend" id="fYes" value="yes" type="radio">
-                        <label for="no">No</label>
-                        <input name="sFriend" id="fNo" value="no" type="radio">
+                        <label for="fYes">Yes</label>
+                        <input name="sFriend" id="fYes" value="Yes" type="radio">
+                        <label for="fNo">No</label>
+                        <input name="sFriend" id="fNo" value="No" type="radio">
                     </fieldset>
                 </div>
 
                 <div class="formRow">
-                    <label for="order">Was your order correct?</label>
+                    <label>Was your order correct?</label>
                     <fieldset class="optGroup">
-                        <label for="yes">Yes</label>
+                        <label for="cYes">Yes</label>
                         <input name="oCorrect" id="cYes" value="yes" type="radio">
-                        <label for="no">No</label>
+                        <label for="cNo">No</label>
                         <input name="oCorrect" id="cNo" value="no" type="radio">
                     </fieldset>
                 </div>
 
                 <div class="formRow">
-                    <label for="order">Was your food hot?</label>
+                    <label>Was your food hot?</label>
                     <fieldset class="optGroup">
-                        <label for="yes">Yes</label>
+                        <label for="hYes">Yes</label>
                         <input name="foodHot" id="hYes" value="yes" type="radio">
-                        <label for="no">No</label>
+                        <label for="hNo">No</label>
                         <input name="foodHot" id="hNo" value="no" type="radio">
                     </fieldset>
                 </div>
